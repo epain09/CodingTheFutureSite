@@ -1,6 +1,10 @@
 export {default as AnnouncementBanner} from '../components/AnnouncementBanner.jsx';
 export {default as LangBlock} from '../components/LangBlock.jsx';
 export {default as LinkButton} from '../components/LinkButton.jsx';
-export {default as MobileNavbar} from '../components/MobileNavbar.jsx';
-export {default as Navbar} from '../components/Navbar.jsx';
 export {default as TutorProfile} from '../components/TutorProfile.jsx'
+export {default as MenuBarsIcon} from '../components/MenuBarsIcon.jsx';
+export {default as BackgroundCircle} from '../components/ui/BackgroundCircle.jsx';
+export {default as MediaCarousel} from '../components/MediaCarousel.jsx';
+export {default as SectionTitle} from '../components/ui/SectionTitle.jsx';
+export {default as SectionContainer} from '../components/ui/SectionContainer.jsx';
+export {default as WorldMap} from '../components/WorldMap.jsx';

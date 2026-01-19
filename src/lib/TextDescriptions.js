@@ -13,4 +13,4 @@ export const START_BEGIN = "Lessons begin!" //TODO
 export const WORLD_IMPACT = "world impact" //TODO
 export const WORLD_STATS = "world stats"   //TODO
 
-export const JOIN_US = "join us!" // TODO
+export const JOIN_US = "We are always looking for new tutors to join our team. If you are a student who is passionate about computer science and teaching, we would love to have you on board!" // TODO

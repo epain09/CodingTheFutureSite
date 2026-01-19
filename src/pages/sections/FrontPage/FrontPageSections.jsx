@@ -6,10 +6,11 @@ import * as images from "../../../lib/Images.js";
 import * as text from "../../../lib/TextDescriptions.js";
 
 import * as sections from "./SectionContents.jsx";
+import {getNavbarHeight, getScreenHeight, getScreenWidth} from "../../../Window.jsx";
 
 export function AboutUsAnnouncementPanel() {
     return (
-        <div className = "frontpage-section capture-page">
+        <div className = "">
             <sections.S1_1/>
         </div>
     );
@@ -17,7 +18,7 @@ export function AboutUsAnnouncementPanel() {
 
 export function YouCanLearnWhyUs() {
     return (
-        <div className = "frontpage-section">
+        <div className = "flex flex-col text-center items-center justify-center pb-15 relative from-white bg-linear-to-b from-50% to-(--color-navbar-light) dark:bg-none">
             <sections.S2_1 />
             <sections.S2_2 />
         </div>
@@ -26,7 +27,7 @@ export function YouCanLearnWhyUs() {
 
 export function MediaCarousel() {
     return (
-        <div className = "frontpage-section">
+        <div className = "pt-5 pb-20 from-white bg-linear-to-t to-(--color-navbar-light) dark:bg-none">
             <sections.S3_1 />
             <sections.S3_2 />
         </div>
@@ -35,7 +36,7 @@ export function MediaCarousel() {
 
 export function GettingStarted() {
     return (
-        <div className = "frontpage-section">
+        <div className = "">
             <sections.S4_1 />
         </div>
     );
@@ -43,8 +44,8 @@ export function GettingStarted() {
 
 export function ImpactJoinUs() {
     return (
-        <div className = "frontpage-section">
-            <sections.S5_1/>
+        <div className = "my-4 flex justify-center items-center">
+            {/* <sections.S5_1/> */}
             <sections.S5_2/>
         </div>
     );

@@ -1,176 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Asap:ital,wght@0,100..900;1,100..900&family=Lilex:ital,wght@0,100..700;1,100..700&family=Martian+Mono:wght@100..800&family=Noto+Sans+Symbols:wght@100..900&family=Outfit:wght@100..900&family=Tourney:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import "tailwindcss";
+@import "react-alice-carousel/lib/alice-carousel.css";
+@theme {
+    --font-lilex: "Lilex", sans-serif;
+    --font-martian-mono: "Martian Mono", monospace;
+    --font-tourney: "Tourney", sans-serif;
+    --font-archivo: "Archivo", sans-serif;
+    --font-asap: "Asap", sans-serif;
+    --font-outfit: "Outfit", sans-serif;
+    --font-urbanist: "Urbanist", sans-serif;
+    --font-inter: "Inter", sans-serif;
+    --font-figtree: "Figtree", sans-serif;
 
-/*:root {*/
-/*    --header-height: 75px;*/
-/*    --lbutton-bg-color: #f2794e;*/
-/*    --lbutton-hover-bg-color: #db5c39;*/
-/*    --lbutton-link-color: white;*/
-/*    --lbutton-hover-link-color: #e3c6a8;*/
-/*    --lbutton-padding: 15px;                        !*TODO*!*/
+    --color-light-orange-1: hsl(35, 79%, 75%);
+    --color-light-orange-2: hsl(21, 62%, 64%);
+    --color-light-orange-3: hsl(16, 85%, 71%);
+    --color-light-yellow-1: hsl(44 79% 76%);
+    --color-medium-salmon-1: oklch(0.606 0.149 22.593);
+    --color-dark-salmon-1: oklch(0.455 0.14 22.64);
+    --color-dark-indigo-1: oklch(0.24 0.1 281.52);
+    --color-dark-indigo-2: hsl(237, 78%, 5%);
 
-/*    --sect-h-font-size: 25px;                       !*TODO*!*/
+    --color-white-1: hsla(0, 0%, 100%, 0.17);
+    --color-border-green-1: hsl(185, 42%, 57%);
+    --color-navbar-light: hsl(21, 59%, 85%);
+    --color-no-color: hsla(0, 0%, 100%, 0);
+}
 
-/*    --sect-top-pad: 50px;                           !*TODO*!*/
-/*    --sect-right-pad: 0px;                          !*TODO*!*/
-/*    --sect-bottom-pad: 50px;                        !*TODO*!*/
-/*    --sect-left-pad: 0px;                           !*TODO*!*/
-/*    --sect-vertical-margin: 100px;                  !*TODO*!*/
-/*}*/
+.buttonTransition {
+    transition:
+    font-size, font-weight, background-color 0.3s,
+    padding, width 0.1s;
+}
 
-/*.section-heading {                                  !*TODO*!*/
-/*    text-align: center;*/
-/*    font-weight: bolder;*/
-/*    font-size: var(--sect-h-font-size);*/
-/*}*/
+.blurTransition {
+    transition:
+    backdrop-filter 0.8s,
+    background-color 0.2s;
+}
 
-/*.frontpage-section{*/
-/*    padding: var(--sect-top-pad), var(--sect-right-pad), var(--sect-bottom-pad), var(--sect-left-pad);*/
-/*    text-align: center;*/
-/*}*/
+.linkTransition {
+    transition:
+    color 0.05s,
+    font-weight 0.2s;
+}
 
-/*.buttons-wrapper {*/
-/*    display: flex;*/
-/*    flex-direction: row;*/
-/*    justify-content: center;*/
-/*}*/
+section {
+    margin-bottom: 4rem;
+}
 
-/*!**/
-/*INDIVIDUAL*/
-/* *!*/
+.carouselTransition {
 
-/*main {*/
-/*    margin-top: var(--header-height);*/
-/*}*/
+}
 
-/*.frontpage {*/
-/*    !*margin-top: var(--header-height);*!*/
-/*    gap: 300px;*/
-/*}*/
+.langblockTransition {
+    transition:
+    border 0.1s,
+    width 0.15s,
+    height 0.2s
+    ;
+}
 
-/*.frontpage > *:not(:last-child) {*/
-/*    margin-bottom: var(--sect-vertical-margin);*/
-/*}*/
+.langblockBg {
+    transition: background-color 0.1s;
+}
 
-/*.capture-page {*/
-/*    display: flex;*/
-/*    flex-direction: row;*/
-/*}*/
-/*.frontpage-section-left {*/
-/*    flex: 1 1 0px;*/
-/*}*/
-/*.frontpage-section-right {*/
-/*    flex: 1 1 0px;*/
-/*}*/
-/*.capture-page div {*/
-/*    align-content: center;*/
-/*    text-align: center;*/
-/*}*/
+.routeLink {
+    transition:
+    color 0.2s,
+    font-weight 0.3s
+    ;
+}
 
-/*!**/
-/*    TODO*/
-/**!*/
+.sectionTitle {
+    transition:
+    font-weight 0.2s;
+}
 
-/*!**/
-/*HEADER BAR*/
-/* *!*/
 
-/*.navbar {*/
-/*    position: fixed;*/
-/*    top: 0;*/
-/*    left: 0;*/
-/*    right: 0;*/
-/*    display: flex;*/
-/*    flex-direction: row;*/
-/*    justify-content: space-between;*/
-/*    background-color: white;*/
-/*    align-items: center;*/
-/*    padding: 0px 5vw 0px 5vw;*/
-/*}*/
+svg {
+    display: inline-block;
+    vertical-align: middle;
+}
 
-/*.logo {*/
-/*    height: var(--header-height);*/
-/*}*/
+path {
+    fill: #2a354d;
+}
 
-/*.navbar ul {*/
-/*    display: flex;*/
-/*    flex-direction: row;*/
-/*    list-style-type: none;*/
-/*    margin: 0;*/
-/*    padding: 0;*/
-/*}*/
+.textColorTransition {
+    transition:
+    font 0.2s,
+    color 0.2s;
+}
 
-/*.navbar li {*/
-/*    padding: 10px;*/
-/*}*/
+.sizeTransition {
+    transition:
+    width 0.1s,
+    height 0.1s;
+}
 
-/*!**/
-/*COMPONENTS*/
-/* *!*/
-
-/*.linkbutton {*/
-/*    text-decoration: none;*/
-/*    font-weight: bold;*/
-/*    background-color: var(--lbutton-bg-color);*/
-/*    color: var(--lbutton-link-color);*/
-/*    padding: var(--lbutton-padding);*/
-/*}*/
-
-/*.linkbutton:hover {*/
-/*    background-color: var(--lbutton-hover-bg-color);*/
-/*    color: var(--lbutton-hover-link-color);*/
-/*}*/
-
-/*.linkbutton-wrapper {*/
-/*    padding: var(--lbutton-padding);*/
-/*}*/
-
-/*.computer-graphic {*/
-/*    width: 50%;*/
-/*}*/
-
-/*.language-section {*/
-/*    display: flex;*/
-/*    flex-direction: row;*/
-/*    align-items: center;*/
-/*}*/
-
-/*.language-section-icon {*/
-/*    height: 100px;*/
-/*}*/
-
-/*.langsection-row {*/
-/*    display:flex;*/
-/*    flex-direction: row;*/
-/*    justify-content: space-evenly;*/
-/*}*/
-
-/*!**/
-/* *!*/
-
-/*.values-section {*/
-/*    display: flex;*/
-/*    flex-direction: row;*/
-/*    justify-content: space-evenly;*/
-/*}*/
-
-/*.values-wrapper, .start-section {*/
-/*    width: 33.3333%;*/
-/*    text-align: center;*/
-/*}*/
-
-/*.start-wrapper {*/
-/*    display: flex;*/
-/*    flex-direction: row;*/
-/*    justify-content: space-evenly;*/
-/*}*/
-
-/*!**/
-/*CONTENT / SECTIONS*/
-/* *!*/
-
-/*.content3-1 {*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    justify-content: center;*/
-/*}*/
-
+.opacityTransition {
+    transition:
+    opacity 0.2s;
+}
