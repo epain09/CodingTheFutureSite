@@ -14,6 +14,7 @@ import AboutOurProgram from "./pages/AboutOurProgram.jsx";
 
 import {getNavbarHeight, getScreenWidth} from "./Window.jsx";
 import Navbar from "./components/ui/Navbar.jsx";
+import Footer from "./components/ui/Footer.jsx";
 import {BrowserRouter, Routes, Route, Links} from "react-router-dom";
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
                   <Route path = '/team' element = {<OurTeam />}/>
               </Routes>
           </div>
+          <Footer/>
       </BrowserRouter>
     );
 }

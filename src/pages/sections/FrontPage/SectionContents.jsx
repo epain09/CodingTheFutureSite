@@ -191,11 +191,11 @@ export function S4_1() {
             <div className = "w-8/10 py-10 md:flex">
                 {
                     cols.map((col, index) => (
-                        <div className = "w-full py-4 flex flex-col items-center px-2" key = {index}>
+                        <div className = "w-full py-4 flex flex-col items-center px-2 lg:blur-xs lg:hover:blur-none blurTransition" key = {index}>
                             <div className = "text-2xl font-lilex py-2">{col.item}</div>
                             <div className = "md:h-auto h-1/2 overflow-y-clip flex flex-col items-center justify-center py-2">
                                 <div className = "w-full h-full overflow-y-clip md:h-(--c-h) py-2">
-                                    <img alt = {col.alt} src={col.img} className = "w-full h-auto overflow-y-clip blur-xs hover:blur-none blurTransition"/>
+                                    <img alt = {col.alt} src={col.img} className = "w-full h-auto overflow-y-clip"/>
                                 </div>
                                 <p className = "mt-2 w-8/10 font-outfit text-xl font-light text-center">{col.desc}</p>
                             </div>
@@ -241,7 +241,7 @@ export function S5_1() {
 
 export function S5_2() {
     return (
-        <div className = "relative flex justify-around items-center w-9/10 py-10 font-lilex rounded-4xl bg-dark-salmon-1 px-4 ">
+        <div className = "relative flex justify-around items-center w-9/10 py-10 h-8/10 mb-5 font-lilex rounded-4xl bg-dark-salmon-1 px-4 ">
             <div className = "-z-10 absolute top-0 left-0 opacity-80 hover:opacity-70 opacityTransition dark:bg-black bg-white h-full w-full rounded-4xl"></div>
             <h1 className = "text-2xl text-medium-salmon-1 shrink-0 grow-0">Join us!</h1>
             <p className = "text-sm md:px-2 px-4">{text.JOIN_US}</p>

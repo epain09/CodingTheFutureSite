@@ -44,7 +44,7 @@ export function GettingStarted() {
 
 export function ImpactJoinUs() {
     return (
-        <div className = "my-4 flex justify-center items-center">
+        <div className = "flex justify-center items-center">
             {/* <sections.S5_1/> */}
             <sections.S5_2/>
         </div>

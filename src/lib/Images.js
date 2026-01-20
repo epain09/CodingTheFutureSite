@@ -82,3 +82,17 @@ export const ARROWS = {
     FORWARD: "../src/assets/icons/site/ui/arrow_forward.png",
     BACK: "../src/assets/icons/site/ui/arrow_back.png"
 };
+
+/*
+TUTORS
+ */
+export const TUTOR_PROFILES = {
+    "alex": "alex.jpeg",
+    "elaine": "elaine.jpg",
+    "hitanshee": "hitanshee.png",
+    "kiran": "kiran.jpg",
+    "shiv": "shiv.jpg",
+    "shreya": "shreya.png",
+    "shreyas": "shreyas.jpeg",
+    "yusuf": "yusuf.png"
+}
