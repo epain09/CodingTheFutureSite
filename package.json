@@ -2,17 +2,21 @@
   "name": "my-react-app",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://chzard.github.io/CodingTheFutureSite",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@lottiefiles/dotlottie-react": "^0.17.10",
     "@tailwindcss/vite": "^4.1.17",
     "d3": "^7.9.0",
+    "gh-pages": "^6.3.0",
     "react": "^19.1.1",
     "react-alice-carousel": "^2.9.1",
     "react-dom": "^19.1.1",
