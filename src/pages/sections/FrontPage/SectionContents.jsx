@@ -38,18 +38,15 @@ export function S1_1() {
 
 export function S2_1() {
 
-    const [mouseX, setMouseX] = React.useState(0);
-    const [mouseY, setMouseY] = React.useState(0);
-
     const rows = [
-            {nm: "Python", mg: images.LANG_PY_ICON},
-            {nm: "Java", mg: images.LANG_JAVA_ICON},
-            {nm: "HTML", mg: images.LANG_HTML_ICON},
-            {nm: "Javascript", mg: images.LANG_JS_ICON},
-            {nm: "C++", mg: images.LANG_CPP_ICON},
-            {nm: "Robotics", mg: images.LANG_ROBO_ICON},
-            {nm: "Security", mg: images.LANG_CYBER_ICON},
-            {nm: "AI/ML", mg: images.LANG_ML_ICON}
+            {nm: "Python", mg: "python.png"},
+            {nm: "Java", mg: "java.png"},
+            {nm: "HTML", mg: "html.png"},
+            {nm: "Javascript", mg:  "javascript.png"},
+            {nm: "C++", mg: "cpp.png"},
+            {nm: "Robotics", mg: "robotics.png"},
+            {nm: "Security", mg: "cyber.png"},
+            {nm: "AI/ML", mg: "ml.png"}
     ];
 
     return (
@@ -61,7 +58,7 @@ export function S2_1() {
                         {
                             rows.map((lang, i) => (
                                 <div key = {i} className = "w-1/2 sm:w-1/4 flex items-center justify-center h-[70px] sm:h-[25vw] lg:h-1/2 py-2">
-                                    <components.LangBlock languageName= {lang.nm} languageIcon={lang.mg}/>
+                                    <components.LangBlock languageName= {lang.nm} languageIcon={"../../../src/assets/icons/languages/" + lang.mg}/>
                                 </div>
                             ))
                         }
@@ -74,10 +71,9 @@ export function S2_1() {
 
 export function S2_2() {
     const values = [
-        {val: "Effective instruction", img: images.VALUES_EFFECTIVE_INSTRUCTION, p: text.VALUES_EFFECTIVE_INSTRUCTION},
-        {val: "Accessibility", img: images.VALUES_ACCESSIBILITY, p: text.VALUES_ACCESSIBILITY},
-        {val: "Student Leadership", img: images.VALUES_STUDENT_LEADERSHIP, p: text.VALUES_STUDENT_LEADERSHIP}
-
+        {val: "Effective instruction", p: text.VALUES_EFFECTIVE_INSTRUCTION},
+        {val: "Accessibility", p: text.VALUES_ACCESSIBILITY},
+        {val: "Student Leadership", p: text.VALUES_STUDENT_LEADERSHIP}
     ];
     return (
         <components.SectionContainer>
@@ -88,7 +84,6 @@ export function S2_2() {
                     {
                         values.map((value, i) => (
                                 <div className = "text-left py-4 md:py-0 md:text-center w-full md:w-1/3 flex flex-col items-center" key = {i}>
-                                    {/*<img alt = {value.val + " graphic"} src = {value.img} className = "my-2 md:my-0"/> TODO*/}
                                     <h1 className = "font-lilex text-2xl pb-2 font-bold text-medium-salmon-1 dark:text-light-orange-1">{value.val}</h1>
                                     <div className = "w-8/10">
                                         <p className = "font-outfit font-light text-xl">{value.p}</p>
@@ -104,11 +99,21 @@ export function S2_2() {
     );
 }
 
-export function S3_1() {                         /*TODO*/
+export function S3_1() {                       
+
+    let imgs = [
+    {url: "2048.png", desc: "Raphael B coded his own 2048 game in P5.js"},
+    {url: "battlegame.png", desc: "Gerard S made a 2 player fighting game in P5.js"},
+    {url: "gradecalculator.png", desc: "Anjali S made a grade calculator in Python"}
+    ];
+
+    for (let i=0; i<imgs.length; i++) {
+        imgs[i].url = "../../../src/assets/demos/img/" + imgs[i].url;
+    }
 
     const imgElements = () => {
         let imglist = [];
-        images.imageDemos().forEach(img => {
+        imgs.forEach(img => {
             imglist.push(
                 <div className = "w-full h-[70vh] flex flex-col items-center justify-center">
                     <div className = "h-3/10 w-6/10 flex flex-col items-center justify-center">
@@ -133,6 +138,17 @@ export function S3_1() {                         /*TODO*/
 }
 
 export function S3_2() {                         /*TODO*/
+
+    let videos = [
+        {url: "wikipedia.mp4", desc: "Weston G made a chrome extension that makes wikipedia look funny using HTML, CSS, and Javascript"},
+        {url: "wordle.mp4", desc: "Aaradhya V made Wordle using Python"},
+        {url: "math.mp4", desc: "Timmy C made a math trivia game using HTML, CSS, and JavaScript"}
+    ]
+
+    for (let i=0; i<videos.length; i++) {
+        videos[i].url = "../../../src/assets/demos/videos/" + videos[i].url;
+    }
+
     const videoElements = () => {
         let videolist = [];
         images.videoDemos().forEach(video => {
@@ -169,19 +185,19 @@ export function S4_1() {
         {
             item: (<p>Fill out <a rel={"noreferrer noopenner"} target="_blank" href = {links.classSignUpLink} className = "linkTransition text-black hover:text-dark-salmon-1 dark:text-white dark:hover:text-medium-salmon-1 font-normal hover:font-bold"><u>this form</u></a>!</p>),
             alt: "sc for form",
-            img: images.START_FORM,
+            img: "form_sc.png",
             desc: text.START_FORM
         },
         {
             item: (<p>The Email</p>),
             alt: "email",
-            img: images.START_EMAIL,
+            img: "emailsc.png",
             desc: text.START_EMAIL
         },
         {
             item: (<p>That's it!</p>),
             alt: "classes start!",
-            img: images.START_BEGIN,
+            img: "coding.jpg",
             desc: text.START_BEGIN
         }
     ];
@@ -195,7 +211,7 @@ export function S4_1() {
                             <div className = "text-2xl font-lilex py-2">{col.item}</div>
                             <div className = "md:h-auto h-1/2 overflow-y-clip flex flex-col items-center justify-center py-2">
                                 <div className = "w-full h-full overflow-y-clip md:h-(--c-h) py-2">
-                                    <img alt = {col.alt} src={col.img} className = "w-full h-auto overflow-y-clip"/>
+                                    <img alt = {col.alt} src={"../../../src/assets/other/" + col.img} className = "w-full h-auto overflow-y-clip"/>
                                 </div>
                                 <p className = "mt-2 w-8/10 font-outfit text-xl font-light text-center">{col.desc}</p>
                             </div>
@@ -208,7 +224,7 @@ export function S4_1() {
 
                 </div>
                 <components.LinkButton innerText="Sign up for lessons!" linkTo={links.classSignUpLink}/>
-                <components.LinkButton innerText="Learn more about classes!" linkTo="/"/> {/*TODO*/}
+                <components.LinkButton innerText="Learn more about classes!" linkTo="/react-gh-pages/about"/> {/*TODO*/}
             </div>
         </div>
     );
@@ -251,4 +267,3 @@ export function S5_2() {
         </div>
     )
 }
-
