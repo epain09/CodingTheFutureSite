@@ -20,7 +20,7 @@ export default function Navbar() {
             <div className = "relative top-0 left-0 z-10 flex items-center justify-between h-(--s-nvh) lg:h-(--s-nvh) ">
                 <div className = "h-full grow-0">
                     <a href = "/" className = "h-full w-full">
-                        <img alt = "CTF logo"  className = "h-full grow-0" src = {images.LOGO} />
+                        <img alt = "CTF logo"  className = "h-full grow-0" src = {"../assets/icons/site/logo/logo-no-bg-white.png"} />
                     </a>
                 </div>
                 <div className = "flex justify-between grow **:whitespace-nowrap">

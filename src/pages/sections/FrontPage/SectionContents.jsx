@@ -1,11 +1,11 @@
 import * as components from "../../../lib/Components.js"
 import * as links from "../../../lib/Links.js"
-import * as images from "../../../lib/Images.js";
 import * as text from "../../../lib/TextDescriptions.js";
 import {getScreenWidth, getScreenHeight, getNavbarHeight, getNavbarHeightNum, getScreenHeightNum} from "../../../Window.jsx";
 import {Link} from "react-router-dom";
 import {DotLottieReact} from "@lottiefiles/dotlottie-react"
 import React from "react";
+import '../../../../public/assets/icons/languages/python.png'
 
 export function S1_1() {
     return (
@@ -58,7 +58,7 @@ export function S2_1() {
                         {
                             rows.map((lang, i) => (
                                 <div key = {i} className = "w-1/2 sm:w-1/4 flex items-center justify-center h-[70px] sm:h-[25vw] lg:h-1/2 py-2">
-                                    <components.LangBlock languageName= {lang.nm} languageIcon={"../../../src/assets/icons/languages/" + lang.mg}/>
+                                    <components.LangBlock languageName= {lang.nm} languageIcon={"../assets/icons/languages/" + lang.mg}/>
                                 </div>
                             ))
                         }
@@ -108,7 +108,7 @@ export function S3_1() {
     ];
 
     for (let i=0; i<imgs.length; i++) {
-        imgs[i].url = "../../../src/assets/demos/img/" + imgs[i].url;
+        imgs[i].url = "../assets/demos/img/" + imgs[i].url;
     }
 
     const imgElements = () => {
@@ -146,12 +146,12 @@ export function S3_2() {                         /*TODO*/
     ]
 
     for (let i=0; i<videos.length; i++) {
-        videos[i].url = "../../../src/assets/demos/videos/" + videos[i].url;
+        videos[i].url = "../assets/demos/videos/" + videos[i].url;
     }
 
     const videoElements = () => {
         let videolist = [];
-        images.videoDemos().forEach(video => {
+        videos.forEach(video => {
             videolist.push(
                 // <img src = {img} alt ={img} className = 'h-full'/>
                 <div className = "w-full h-[70vh] flex flex-col items-center justify-center">
@@ -211,7 +211,7 @@ export function S4_1() {
                             <div className = "text-2xl font-lilex py-2">{col.item}</div>
                             <div className = "md:h-auto h-1/2 overflow-y-clip flex flex-col items-center justify-center py-2">
                                 <div className = "w-full h-full overflow-y-clip md:h-(--c-h) py-2">
-                                    <img alt = {col.alt} src={"../../../src/assets/other/" + col.img} className = "w-full h-auto overflow-y-clip"/>
+                                    <img alt = {col.alt} src={"../assets/other/" + col.img} className = "w-full h-auto overflow-y-clip"/>
                                 </div>
                                 <p className = "mt-2 w-8/10 font-outfit text-xl font-light text-center">{col.desc}</p>
                             </div>

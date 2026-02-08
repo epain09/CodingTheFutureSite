@@ -7,7 +7,6 @@ import * as text from "../lib/TextDescriptions.js";
 
 import * as sections from "./sections/FrontPage/FrontPageSections.jsx";
 import {getNavbarHeight, getScreenHeight, getScreenWidth, getScreenWidthNum} from "../Window.jsx";
-import {CODE_BG_ALT} from "../lib/Images.js";
 
 function FrontPage() {
 
@@ -31,7 +30,7 @@ function FrontPage() {
             style = {{'--s-width': getScreenWidth(), '--s-height': getScreenHeight()}}
             className = "w-(--s-width) text-dark-navbar-2 dark:text-white"
             onMouseMove = {(event) => mouseHoverBackground(event)}>
-            <div className = 'h-screen bg-[url("../src/assets/bg/lotsofcode.png")] opacity-55 z-0 *:z-0 absolute top-0 left-0 right-0'>
+            <div className = 'h-screen bg-[url("../assets/bg/lotsofcode.png")] opacity-55 z-0 *:z-0 absolute top-0 left-0 right-0'>
                 <div className = 'h-full bg-linear-to-b from-orange-500/20 dark:from-no-color from-0% to-60% to-white dark:to-black dark:to-80% '></div>
             </div>
             {/* <components.BackgroundCircle

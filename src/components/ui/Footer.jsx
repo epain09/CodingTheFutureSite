@@ -7,7 +7,7 @@ export default function Footer() {
                 <div className = "flex flex-col *:w-full text-left">
                     <h1 className = 'pl-3'>Contact us:</h1>
                     <div className = "flex *:px-4">
-                        <img src = "../../src/assets/icons/site/ui/emailimgblack.png" alt = "email icon"/>
+                        <img src = "../assets/icons/site/ui/emailimgblack.png" alt = "email icon"/>
                         <p>Email: codingthefuture101@gmail.com</p>
                     </div>
                 </div>
@@ -15,7 +15,7 @@ export default function Footer() {
                     <p>
                         &copy; Coding the Future 2026
                     </p>
-                    <img src = "../../../src/assets/icons/site/logo/logo-no-bg-white.png" className = "h-12" alt = "email icon"/>
+                    <img src = "../assets/icons/site/logo/logo-no-bg-white.png" className = "h-12" alt = "email icon"/>
                 </div>
             </div>
         </footer>

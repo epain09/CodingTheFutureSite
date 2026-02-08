@@ -1,5 +1,4 @@
 import TutorProfile from '../../../../src/components/TutorProfile.jsx';
-import {TUTOR_PROFILES} from '../../../../src/lib/Images.js';
 
 const tutors = [
     {imgid: "alex", name: "Alex Berman", location: "NY, USA", role: "Co-Founder and Co-President"},
@@ -12,13 +11,24 @@ const tutors = [
     {imgid: "elaine", name: "Elaine Huang", location: "CA, USA", role: "Co-director of Outreach"}
 ]
 
+const TUTOR_PROFILES = {
+    "alex": "alex.jpeg",
+    "elaine": "elaine.jpg",
+    "hitanshee": "hitanshee.png",
+    "kiran": "kiran.jpg",
+    "shiv": "shiv.jpg",
+    "shreya": "shreya.png",
+    "shreyas": "shreyas.jpeg",
+    "yusuf": "yusuf.png"
+}
+
 function Tutors() {
     return (
         <div className = "md:flex md:flex-wrap justify-center md:*:w-5/12 *:py-2">
             {
                 tutors.map((tutor, id) => (
                     <div>
-                        <TutorProfile key={id} tutorImg = {"../../../../src/assets/tutors/" + TUTOR_PROFILES[tutor.imgid]} tutor = {tutor}/>
+                        <TutorProfile key={id} tutorImg = {"../assets/tutors/" + TUTOR_PROFILES[tutor.imgid]} tutor = {tutor}/>
                     </div>
                 ))
             }
