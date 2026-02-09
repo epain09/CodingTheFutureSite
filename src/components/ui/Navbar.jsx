@@ -1,6 +1,5 @@
 import * as links from "../../lib/Links.js"
 import * as components from "../../lib/Components.js"
-import * as images from "../../lib/Images.js"
 import {getScreenWidth, getScreenHeight, getNavbarHeight} from "../../Window.jsx";
 import {useState} from 'react';
 import {Link} from "react-router-dom";

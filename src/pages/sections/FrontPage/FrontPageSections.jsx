@@ -1,12 +1,4 @@
-import { useState } from 'react'
-import {createRoot} from "react-dom/client";
-import * as components from "../../../lib/Components.js"
-import * as links from "../../../lib/Links.js"
-import * as images from "../../../lib/Images.js";
-import * as text from "../../../lib/TextDescriptions.js";
-
 import * as sections from "./SectionContents.jsx";
-import {getNavbarHeight, getScreenHeight, getScreenWidth} from "../../../Window.jsx";
 
 export function AboutUsAnnouncementPanel() {
     return (
@@ -45,7 +37,6 @@ export function GettingStarted() {
 export function ImpactJoinUs() {
     return (
         <div className = "flex justify-center items-center">
-            {/* <sections.S5_1/> */}
             <sections.S5_2/>
         </div>
     );

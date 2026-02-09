@@ -1,5 +1,4 @@
 import {useState} from "react";
-import * as images from "../lib/Images.js";
 import AliceCarousel from "react-alice-carousel";
 
 export default function MediaCarousel({mediaItems}) {

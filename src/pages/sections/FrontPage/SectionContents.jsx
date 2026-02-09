@@ -257,7 +257,7 @@ export function S5_1() {
 
 export function S5_2() {
     return (
-        <div className = "relative flex justify-around items-center w-9/10 py-10 h-8/10 mb-5 font-lilex rounded-4xl bg-dark-salmon-1 px-4 ">
+        <div className = "relative md:flex md:justify-around items-center w-9/10 py-10 h-8/10 mb-5 font-lilex rounded-4xl bg-dark-salmon-1 px-4 ">
             <div className = "-z-10 absolute top-0 left-0 opacity-80 hover:opacity-70 opacityTransition dark:bg-black bg-white h-full w-full rounded-4xl"></div>
             <h1 className = "text-2xl text-medium-salmon-1 shrink-0 grow-0">Join us!</h1>
             <p className = "text-sm md:px-2 px-4">{text.JOIN_US}</p>
