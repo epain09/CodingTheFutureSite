@@ -22,24 +22,18 @@ const TUTOR_PROFILES = {
     "yusuf": "yusuf.png"
 }
 
-function Tutors() {
-    return (
-        <div className = "md:flex md:flex-wrap justify-center md:*:w-5/12 *:py-2">
-            {
-                tutors.map((tutor, id) => (
-                    <div>
-                        <TutorProfile key={id} tutorImg = {"../assets/tutors/" + TUTOR_PROFILES[tutor.imgid]} tutor = {tutor}/>
-                    </div>
-                ))
-            }
-        </div>
-    )
-}
-
 export default function OurTeamPage() {
     return (
         <div className = "w-6/10 flex flex-col items-center justify-center mb-8">
-            <Tutors/>
+            <div className = "md:flex md:flex-wrap justify-center w-full md:*:w-5/12 *:py-2">
+                {
+                    tutors.map((tutor, id) => (
+                        <div>
+                            <TutorProfile key={id} tutorImg = {"../assets/tutors/" + TUTOR_PROFILES[tutor.imgid]} tutor = {tutor}/>
+                        </div>
+                    ))
+                }
+            </div>
         </div>
     );
 }
