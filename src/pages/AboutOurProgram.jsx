@@ -11,12 +11,12 @@ function AboutOurProgram() {
                 "'s availability. Classes are once a week and are 40 minutes long."), d: "left"},
         {q: "What types of classes are offered?", a: ("We offer both one-on-one and group tutoring lessons. In the coding classes, high school and university students provide instruction to groups of 5-10 students on a topic of common interest. These classes are aimed at middle and high school students with all levels of computer science knowledge. Cohorts of students will be broken up by skill level, availability, and coding language. One-on-one tutoring can offer more individualized support for students who are interested in assistance on a passion project or learning a niche topic."), d: "left"},
         {q: "How are these classes free?", a: ("We are able to offer this service for free because our tutors are student volunteers who are passionate about computer science and teaching. Our tutors are high school and university students who are eager to share their knowledge and help others learn."), d: "left"},
-        {q: "What can I learn in these classes?", a: ("We offer instruction in a variety of coding languages, including Python, Java, C++, Arduino, FTC Robotics, Algorithms, Web Engineering, Machine Learning, Cyber Security, Competitive Programming, and more. Instructors are able to teach students these topics comprehensively, and also help tutees develop passion projects. When you sign up for our programs you can indicate which of these languages you are interested in learning"), d: "left"},
+        {q: "What can I learn in these classes?", a: ("We offer instruction in a variety of coding languages, including Python, Java, C++, Arduino, FTC Robotics, Algorithms, Web Engineering, Machine Learning, Cyber Security, Competitive Programming, and more. Instructors are able to teach students these topics comprehensively, and also help tutees develop passion projects. When you sign up for our programs you can indicate which of these languages you are interested in learning, and you will be matched with a tutor accordingly!"), d: "left"},
     ]
 
     return (
       <div className = {"flex flex-col w-full items-center justify-center pb-10 dark:text-white"}>
-          <h1 className = "dark:text-white dark:bg-black text-4xl font-lilex mt-6">
+          <h1 className = "dark:text-white dark:bg-black text-4xl font-lilex mt-10 md:mt-8">
               About our program
           </h1>
           <h2 className = "font-asap dark:text-white text-2xl py-6">

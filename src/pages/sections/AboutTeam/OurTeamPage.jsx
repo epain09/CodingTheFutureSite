@@ -24,7 +24,7 @@ const TUTOR_PROFILES = {
 
 export default function OurTeamPage() {
     return (
-        <div className = "w-6/10 flex flex-col items-center justify-center mb-8">
+        <div className = "w-8/10 flex flex-col items-center justify-center mb-8">
             <div className = "md:flex md:flex-wrap justify-center w-full md:*:w-5/12 *:py-2">
                 {
                     tutors.map((tutor, id) => (

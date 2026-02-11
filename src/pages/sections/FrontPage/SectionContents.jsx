@@ -80,7 +80,7 @@ export function S2_2() {
             <div className = "text-center flex flex-col justify-center items-center">
                 <div className = "space pt-6"></div>
                 <components.SectionTitle text={'Why Us?'}/>
-                <div className = "md:flex w-8/10 md:pt-8">
+                <div className = "md:flex w-9/10 md:w-8/10 md:pt-8">
                     {
                         values.map((value, i) => (
                                 <div className = "text-left py-4 md:py-0 md:text-center w-full md:w-1/3 flex flex-col items-center" key = {i}>
@@ -115,11 +115,11 @@ export function S3_1() {
         let imglist = [];
         imgs.forEach(img => {
             imglist.push(
-                <div className = "w-full h-[70vh] flex flex-col items-center justify-center">
-                    <div className = "h-3/10 w-6/10 flex flex-col items-center justify-center">
+                <div className = "w-full flex flex-col text-center items-center">
+                    <div className = "w-8/10 flex flex-col text-center py-4">
                         <p className = "text-normal md:text-2xl">{img.desc}</p>
                     </div>
-                    <div className = "h-7/10 flex items-center justify-center">
+                    <div className = "">
                         <img src = {img.url} alt ={img.desc} className = 'w-full lg:w-auto h-auto lg:h-full ' role={'presentation'} onDragStart={(e)=>e.preventDefault()}/>
                     </div>
                 </div>
@@ -140,9 +140,9 @@ export function S3_1() {
 export function S3_2() {                         /*TODO*/
 
     let videos = [
-        {url: "wikipedia.mp4", desc: "Weston G made a chrome extension that makes wikipedia look funny using HTML, CSS, and Javascript"},
-        {url: "wordle.mp4", desc: "Aaradhya V made Wordle using Python"},
-        {url: "math.mp4", desc: "Timmy C made a math trivia game using HTML, CSS, and JavaScript"}
+        {url: "wikipedia.mp4", desc: "Weston G made a chrome extension that makes wikipedia look funny using HTML, CSS, and Javascript", key: 1},
+        {url: "wordle.mp4", desc: "Aaradhya V made Wordle using Python", key:2},
+        {url: "math.mp4", desc: "Timmy C made a math trivia game using HTML, CSS, and JavaScript", key:3}
     ]
 
     for (let i=0; i<videos.length; i++) {
@@ -154,12 +154,12 @@ export function S3_2() {                         /*TODO*/
         videos.forEach(video => {
             videolist.push(
                 // <img src = {img} alt ={img} className = 'h-full'/>
-                <div className = "w-full h-[70vh] flex flex-col items-center justify-center">
-                    <div className = "h-2/10 w-6/10 flex flex-col items-center justify-center">
+                <div className = "w-full h-auto flex flex-col items-center">
+                    <div className = "w-8/10 md:w-6/10 flex flex-col text-center py-4">
                         <p className = "text-normal md:text-2xl">{video.desc}</p>
                     </div>
-                    <div className = "h-8/10 flex items-center justify-center">
-                        <video controls autoPlay className = "h-full">
+                    <div>
+                        <video controls autoPlay loop muted className = "h-full" key = {video.key}>
                             <source src={video.url} type={'video/mp4'} role={'presentation'} onDragStart={(e)=>e.preventDefault()} />
                             video not supported :(
                         </video>
@@ -174,7 +174,7 @@ export function S3_2() {                         /*TODO*/
         <components.SectionContainer style = "mt-8">
             <components.SectionTitle text={"..and some more..."}/>
             <div className = "space pb-6"></div>
-               <components.MediaCarousel mediaItems={videoElements()} /> 
+            <components.MediaCarousel mediaItems={videoElements()} /> 
         </components.SectionContainer>
     );
     /*Carousel of student demos (videos)*/
@@ -257,10 +257,10 @@ export function S5_1() {
 
 export function S5_2() {
     return (
-        <div className = "relative md:flex md:justify-around items-center w-9/10 py-10 h-8/10 mb-5 font-lilex rounded-4xl bg-dark-salmon-1 px-4 ">
-            <div className = "-z-10 absolute top-0 left-0 opacity-80 hover:opacity-70 opacityTransition dark:bg-black bg-white h-full w-full rounded-4xl"></div>
-            <h1 className = "text-2xl text-medium-salmon-1 shrink-0 grow-0">Join us!</h1>
-            <p className = "text-sm md:px-2 px-4">{text.JOIN_US}</p>
+        <div className = "relative flex flex-col md:flex-row md:justify-around items-center w-9/10 py-10 h-8/10 mb-5 font-lilex rounded-4xl bg-dark-salmon-1/40 md:bg-dark-salmon-1 px-4 ">
+            <div className = "-z-10 absolute top-0 left-0 opacity-0 md:opacity-80 md:hover:opacity-70 opacityTransition dark:bg-black bg-white h-full w-full rounded-4xl"></div>
+            <h1 className = "text-2xl text-medium-salmon-1 shrink-0 grow-0 py-2 md:py-0">Join us!</h1>
+            <p className = "text-sm md:px-2 px-4 py-2 md:py-0">{text.JOIN_US}</p>
             <div className = "shrink-0 grow-0">
                 <components.LinkButton innerText="Join us!" linkTo={links.tutorSignUpLink}/>
             </div>

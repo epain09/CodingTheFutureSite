@@ -24,7 +24,7 @@ export default function Navbar() {
                 </div>
                 <div className = "flex justify-between grow **:whitespace-nowrap">
                     <div className = "hidden lg:flex px-2 lg:items-center">
-                        <ul className ={"flex items-center justify-between *:text-1.5xl " +ls}>
+                        <ul className ={"flex items-center justify-between *:text-lg " +ls}>
                             <li className = "routeLink"><Link to="/">Home</Link></li> {/*TODO*/}
                             <li className = "routeLink"><Link to = "/about">About Our Program</Link></li> {/*TODO*/}
                             <li className = "routeLink"><Link to= "/team">Our Team</Link></li> {/*TODO*/}
@@ -49,7 +49,7 @@ export default function Navbar() {
                         dropNavOpen ?
                             <div className = "absolute top-(--s-nvh) dark:bg-none backdrop-blur-sm rounded-lg text-white font-lilex right-0" onMouseOver = {()=>{setMobileNavOpacity("opacity-15")}} onMouseOut = {() => {setMobileNavOpacity("opacity-0")}}>
                                 <div className = {"w-full h-full bg-white absolute top-0 left-0 right-0 -z-10 rounded-lg opacityTransition " + mobileNavOpacity}></div>
-                                <ul className = {ls + " *:py-0.5"}>
+                                <ul className = {ls + " *:py-0.5 *:text-xl"}>
                                     <li onClick={() => setDropNavOpen(false)}><Link to="/">Home</Link></li> {/*TODO*/}
                                     <li onClick={() => setDropNavOpen(false)}><Link to = "/about">About Our Program</Link></li> {/*TODO*/}
                                     <li onClick={() => setDropNavOpen(false)}><Link to= "/team">Our Team</Link></li> {/*TODO*/}

@@ -1,5 +1,4 @@
 import {useState} from "react";
-import AliceCarousel from "react-alice-carousel";
 
 export default function MediaCarousel({mediaItems}) {
 
@@ -30,26 +29,22 @@ export default function MediaCarousel({mediaItems}) {
         console.log(mediaItems[itemIndex]);
     }
 
-    // return (
-    //   <div className="flex relative">
-    //       <button className = "cursor-pointer"
-    //               type='button'
-    //               onClick={goBack}>
-    //           <img src = {images.ARROWS.BACK} alt = 'back arrow'/>
-    //       </button>
-    //       <div className="h-[75vh] w-[50vw] bg-none flex justify-center">
-    //           {mediaItems[itemIndex]}
-    //       </div>
-    //       <button className = "cursor-pointer"
-    //               type='button'
-    //               onClick={goForward}>
-    //           <img src = {images.ARROWS.FORWARD} alt = 'forward arrow'/>
-    //       </button>
-    //   </div>
-    // );
-
     return (
-            <AliceCarousel mouseTracking infinite items={mediaItems} autoHeight/>
+      <div className="flex items-center relative h-full">
+          <button className = "cursor-pointer h-full"
+                  type='button'
+                  onClick={goBack}>
+              <img src = {"../assets/icons/site/ui/arrow_back.png"} alt = 'back arrow'/>
+          </button>
+          <div className="w-[80vw] md:w-[50vw] bg-none flex">
+              {mediaItems[itemIndex]}
+          </div>
+          <button className = "cursor-pointer h-full"
+                  type='button'
+                  onClick={goForward}>
+              <img src = {"../assets/icons/site/ui/arrow_forward.png"} alt = 'forward arrow'/>
+          </button>
+      </div>
     );
 
 }
