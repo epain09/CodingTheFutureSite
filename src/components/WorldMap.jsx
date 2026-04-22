@@ -1,8 +1,10 @@
 import * as d3 from 'd3';
-import {useEffect, useRef} from 'react';
+import {useEffect, useRef, useState} from 'react';
 export default function WorldMap() {
     const mapref = useRef();
     const pointref = useRef();
+    const gref = useRef();
+    const [pos, setPos] = useState("");
     const data = {
                 "USA": 48,
                 "IND": 13,
@@ -22,7 +24,6 @@ export default function WorldMap() {
 
         var svg = d3
             .select(mapref.current)
-            .append('svg')
             .attr("width", width)
             .attr("height", height);
 
@@ -34,7 +35,7 @@ export default function WorldMap() {
             .domain([0, d3.max(Object.values(data))]);
         
         d3.json("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson").then(world => {
-            svg.append("g")
+            d3.select(gref.current)
                 .selectAll("path")
                 .data(world.features)
                 .enter().append("path")
@@ -44,7 +45,7 @@ export default function WorldMap() {
                     value = value + Math.log(value + 1) * 10;
                     return colorScale(value);
                 })
-                .attr("stroke","white")
+                .attr("stroke","black")
                 .on("mouseover", function (event, d) {
                     const countryName = d.properties.name;
                     console.log(d.id)
@@ -54,10 +55,11 @@ export default function WorldMap() {
                     value == 1 ?
                         tooltip.html(`${countryName}: ${value} person`)
                             .style("left", (event.pageX + 5) + "px")
-                            .style("top", (event.pageY - 28) + "px")
+                            .style("top", (event.pageY - 18) + "px")
                         : tooltip.html(`${countryName}: ${value} people`)
                             .style("left", (event.pageX + 5) + "px")
-                            .style("top", (event.pageY - 28) + "px");
+                            .style("top", (event.pageY - 18) + "px");
+                    console.log(`${countryName} : ${value}`);
                 })
                 .on("mouseout", function () {
                     tooltip.style("opacity", 0);
@@ -66,10 +68,11 @@ export default function WorldMap() {
     }
     )
     return (
-        <div className = "relative">
+        <div>
             <svg className = "w-[1000px] h-[600px]" id = "map" ref={mapref}>
+                <g ref = {gref}></g>
             </svg>
-            <div className = "tooltip absolute bg-white text-black" ref = {pointref}></div>
+            <div className = {"tooltip absolute bg-white text-black p-2 rounded-xl " + pos} ref = {pointref}></div>
         </div>
         
     )

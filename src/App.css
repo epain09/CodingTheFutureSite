@@ -74,16 +74,6 @@ section {
     font-weight 0.2s;
 }
 
-
-svg {
-    display: inline-block;
-    vertical-align: middle;
-}
-
-path {
-    fill: #2a354d;
-}
-
 .textColorTransition {
     transition:
     font 0.2s,

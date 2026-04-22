@@ -207,7 +207,7 @@ export function S4_1() {
             <div className = "w-8/10 py-10 md:flex">
                 {
                     cols.map((col, index) => (
-                        <div className = "w-full py-4 flex flex-col items-center px-2 lg:blur-xs lg:hover:blur-none blurTransition" key = {index}>
+                        <div className = "w-full py-4 flex flex-col items-center px-2" key = {index}>
                             <div className = "text-2xl font-lilex py-2">{col.item}</div>
                             <div className = "md:h-auto h-1/2 overflow-y-clip flex flex-col items-center justify-center py-2">
                                 <div className = "w-full h-full overflow-y-clip md:h-(--c-h) py-2">
@@ -247,10 +247,6 @@ export function S5_1() {
                 </Geographies>
             </ComposableMap> */}
             <components.WorldMap/>
-            <div>
-                <p>{text.WORLD_IMPACT}</p>
-                <p>{text.WORLD_STATS}</p>
-            </div>
         </div>
     );
 }
